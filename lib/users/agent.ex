@@ -11,9 +11,9 @@ defmodule Exlivery.Users.Agent do
 
   def get(cpf), do: Agent.get(__MODULE__, &get_user(&1, cpf))
 
-  def update_state(state, %User{cpf: cpf} = user), do: Map.put(state, cpf, user)
+  defp update_state(state, %User{cpf: cpf} = user), do: Map.put(state, cpf, user)
 
-  def get_user(state, cpf) do
+  defp get_user(state, cpf) do
     case Map.get(state, cpf) do
       nil -> {:error, "User not found"}
       user -> {:ok, user}
