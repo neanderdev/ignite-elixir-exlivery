@@ -24,7 +24,7 @@ defmodule Exlivery.Users.AgentTest do
       {:ok, cpf: cpf}
     end
 
-    test "when  the is found, returns the user", %{cpf: cpf} do
+    test "when the is found, returns the user", %{cpf: cpf} do
       :user
       |> build(cpf: cpf)
       |> UserAgent.save()
