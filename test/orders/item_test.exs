@@ -1,4 +1,4 @@
-defmodule ExliveryTest do
+defmodule ExliveryTest.Orders.ItemTest do
   use ExUnit.Case
 
   alias Exlivery.Orders.Item
